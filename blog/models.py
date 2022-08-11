@@ -6,7 +6,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 class Article(models.Model):
     title = models.CharField(max_length=255, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='articles') 
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='articles')
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
     body = models.TextField()
