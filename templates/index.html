@@ -2,39 +2,57 @@
 
 {% block content %}
 
-<!-- Article List -->
-<div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
-        {% for article in article_list %}
-        <div class="post-preview">
-            <a href="post.html">
-                <h2 class="post-title">
-                    {{ article.title }}
-                </h2>
-                <h3 class="post-subtitle">
-                    {{ article.excerpt }}
-                </h3>
-            </a>
-            <p class="post-meta">Posted by
-                <a href="#">{{ article.author }}</a>
-                on {{ article.date_created }}    <i class="far fa-heart"></i>
-                {{ article.number_of_likes }}</p>
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('static/img/home1.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>Mum Loves Representation</h1>
+                    <span class="subheading">A Blog by Tomi</span>
+                </div>
+            </div>
         </div>
-        <hr>
-        {% endfor %}
     </div>
-    
+</header>
+
+<!-- Article List -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            {% for article in article_list %}
+            <div class="post-preview">
+                <a href="{% url 'article_detail' article.slug %}">
+                    <h2 class="post-title">
+                        {{ article.title }}
+                    </h2>
+                    <h3 class="post-subtitle">
+                        {{ article.excerpt }}
+                    </h3>
+                </a>
+                <p class="post-meta">Posted by
+                    <a href="#">{{ article.author }}</a>
+                    on {{ article.date_created }} <i class="far fa-heart"></i>
+                    {{ article.number_of_likes }}</p>
+            </div>
+            <hr>
+            {% endfor %}
+        </div>
+
+    </div>
 </div>
 {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
+
 {% endblock %}
