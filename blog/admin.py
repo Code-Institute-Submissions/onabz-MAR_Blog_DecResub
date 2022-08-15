@@ -17,7 +17,7 @@ class ArticleAdmin(SummernoteModelAdmin):
 class AdminComment(admin.ModelAdmin):
 
     search_fields = ('name', 'body')
-    list_display = ('name', 'post', 'body', 'date_created', 'approved')
+    list_display = ('name', 'article', 'body', 'date_created', 'approved')
     list_filter = ('date_created', 'approved')
     actions = ['approve_comments']
 
