@@ -1,6 +1,6 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
 
-{% block content %}
+{% load crispy_forms_tags %}
 
 <!-- Page Header -->
 <header class="masthead" style="background-image: url('{{ article.featured_image.url }}');">
@@ -68,7 +68,16 @@
       </div>
       <div class="col-md-4 card mb-4  mt-3 ">
         <div class="card-body">
-          <!-- For later -->
+          {% if user.is_authenticated %}
+
+          <h3>Add a comment...</h3>
+          <form method="post">
+            {{ comment_form | crispy }}
+            {% csrf_token %}
+            <button class="btn btn-outline-dark" type="submit">Post Comment</button>
+          </form>
+
+          {% endif %}
         </div>
       </div>
     </div>
