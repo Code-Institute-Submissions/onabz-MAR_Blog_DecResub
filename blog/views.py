@@ -54,7 +54,7 @@ class ArticleDetailView(View):
             comment_form.instance.email = request.user.email
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
-            comment.post = post
+            comment.article = article
             comment.save()
         else:
             comment_form = CommentForm()
