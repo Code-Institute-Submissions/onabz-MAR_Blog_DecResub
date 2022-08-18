@@ -28,6 +28,25 @@
         <p class="text-justify">{{ article.body | safe }}</p>
         <div class="row">
           <div class="col-1">
+            <strong>
+              {% if user.is_authenticated %}
+              <form action="{% url 'article_like' article.slug %}" class="d-inline" method="post">
+                {% csrf_token %}
+                {% if liked %}
+
+                <button type="submit" value="{{ article.slug }}" class="like-btn"><i class="fas fa-heart"></i></button>
+
+                {% else %}
+
+                <button type="submit" value="{{ article.slug }}" class="like-btn"><i class="far fa-heart"></i></button>
+
+                {% endif %}
+              </form>
+              {% else %}
+              <span class="text-secondary"><i class="far fa-heart"></i></span>
+              {% endif %}
+              <span class="text-secondary">{{ article.number_of_likes }}</span>
+            </strong>
             <strong class="text-secondary"><i class="far fa-heart"></i> {{ article.number_of_likes }} </strong>
           </div>
           <div class="col-1">
