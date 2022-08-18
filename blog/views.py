@@ -12,7 +12,7 @@ class ArticleView(generic.ListView):
 
 
 class AboutView(generic.CreateView):
-    model = Article
+    model = About
     template_name = 'about.html'
     fields = '__all__'
 
