@@ -69,5 +69,5 @@ class ArticleDetailView(View):
                 "commented": True,
                 "liked": liked,
                 "comment_form": CommentForm()
-            }
+            },
         )
