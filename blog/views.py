@@ -84,4 +84,4 @@ class ArticleLike(View):
         else:
             article.likes.add(request.user)
 
-        return HttpResponseRedirect(reverse('article', args=[slug]))
+        return HttpResponseRedirect(reverse('article_detail', args=[slug]))
