@@ -30,6 +30,9 @@ class About(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
     body = models.TextField()
 
+    def __str__(self):
+        return "About Page"
+
 
 class Comment(models.Model):
     article = models.ForeignKey(Article, related_name='comments', on_delete=models.CASCADE)
