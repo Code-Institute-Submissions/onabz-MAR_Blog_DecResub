@@ -31,7 +31,7 @@ class About(models.Model):
     body = models.TextField()
 
     def __str__(self):
-        return "About Page"
+        return 'About Page'
 
 
 class Comment(models.Model):
