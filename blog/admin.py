@@ -29,3 +29,4 @@ class AdminComment(admin.ModelAdmin):
 class AboutAdmin(SummernoteModelAdmin):
 
     summernote_fields = ('body')
+
