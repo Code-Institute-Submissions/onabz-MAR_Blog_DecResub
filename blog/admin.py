@@ -23,3 +23,9 @@ class AdminComment(admin.ModelAdmin):
 
     def approve_comments(self, request, queryset):
         queryset.update(approved=True)
+
+
+@admin.register(About)
+class AboutAdmin(SummernoteModelAdmin):
+
+    summernote_fields = ('body')
