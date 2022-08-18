@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Article, Comment, About
+from .models import Article, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -24,9 +24,4 @@ class AdminComment(admin.ModelAdmin):
     def approve_comments(self, request, queryset):
         queryset.update(approved=True)
 
-
-@admin.register(About)
-class AboutAdmin(SummernoteModelAdmin):
-
-    summernote_fields = ('body')
 
