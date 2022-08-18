@@ -26,7 +26,6 @@ class Article(models.Model):
         return self.likes.count()
 
 
-
 class Comment(models.Model):
     article = models.ForeignKey(Article, related_name='comments', on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
