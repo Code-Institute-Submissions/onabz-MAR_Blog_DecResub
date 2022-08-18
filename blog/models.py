@@ -26,6 +26,11 @@ class Article(models.Model):
         return self.likes.count()
 
 
+class About(models.Model):
+    featured_image = CloudinaryField('image', default='placeholder')
+    body = models.TextField()
+
+
 class Comment(models.Model):
     article = models.ForeignKey(Article, related_name='comments', on_delete=models.CASCADE)
     name = models.CharField(max_length=255)

@@ -36,7 +36,7 @@ class ArticleDetailView(View):
                 "commented": False,
                 "liked": liked,
                 "comment_form": CommentForm()
-            }
+            },
         )
 
 
