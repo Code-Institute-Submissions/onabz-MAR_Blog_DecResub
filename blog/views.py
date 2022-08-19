@@ -12,7 +12,7 @@ class ArticleView(generic.ListView):
     paginate_by = 4
 
 
-class AboutView(View):
+class AboutView(generic.CreateView):
     model = Article
     template_name = 'about.html'
     fields = '__all__'
