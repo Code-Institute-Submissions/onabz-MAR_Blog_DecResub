@@ -12,7 +12,7 @@ class ArticleView(generic.ListView):
     paginate_by = 4
 
 
-class AboutView(generic.CreateView):
+class AboutView(View):
     model = Article
     template_name = 'about.html'
     fields = '__all__'
@@ -85,3 +85,6 @@ class ArticleLike(View):
             article.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('article_detail', args=[slug]))
+
+
+class AddArticleView(generic.CreateView)
