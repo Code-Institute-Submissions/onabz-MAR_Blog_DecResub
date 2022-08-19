@@ -87,4 +87,7 @@ class ArticleLike(View):
         return HttpResponseRedirect(reverse('article_detail', args=[slug]))
 
 
-class AddArticleView(generic.CreateView)
+class AddArticleView(generic.CreateView):
+    model = Article
+    template_name = 'add_article.html'
+    fields = '__all__'
