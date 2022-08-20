@@ -27,7 +27,8 @@ class Article(models.Model):
         return self.likes.count()
 
     def get_absolute_url(self):
-        return reverse('article_detail', args=[slug])
+        # return reverse('article_detail', args=(self.id))
+        return reverse('home')
 
 
 class Comment(models.Model):
