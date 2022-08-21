@@ -4,17 +4,17 @@
 
 <section>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mt-5 mx-auto">
-          <h3>Add Article</h3>
-          <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button class="btn btn-outline-dark">ADD</button>
-        </form>
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mt-5 mx-auto">
+                <h3>Add Article</h3>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn btn-outline-dark">ADD</button>
+                </form>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
 
 {% endblock %}
