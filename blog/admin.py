@@ -10,7 +10,7 @@ class ArticleAdmin(SummernoteModelAdmin):
     list_display = ('title', 'slug', 'date_created', 'status')
     search_fields = ('title', 'body')
     list_filter = ('date_created', 'status')
-    summernote_fields = ('body')
+    summernote_fields = ('body',)
 
 
 @admin.register(Comment)
