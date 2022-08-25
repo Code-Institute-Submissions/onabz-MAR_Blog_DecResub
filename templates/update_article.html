@@ -7,12 +7,16 @@
         <div class="row">
             <div class="col-lg-8 col-md-10 mt-5 mx-auto">
                 {% if user.is_authenticated %}
+                {% if user.id == article.author.id %}
                 <h3>Update Article</h3>
                 <form method="post">
                     {% csrf_token %}
                     {{ form.as_p }}
                     <button class="btn btn-outline-dark">UPDATE</button>
                 </form>
+                {% else %}
+                <h4>You are not allowed to use this page !!!</h4>
+                {% endif %}
                 {% else %}
                 <h4>You need to login to use this page !!!</h4>
                 {% endif %}

@@ -13,11 +13,13 @@
           <h2 class="subheading">{{ article.excerpt }}</h2>
           <span class="meta">Posted by
             <a href="#">{{ article.author }}</a>
-            on {{ article.date_created }} 
+            on {{ article.date_created }}
             <small>
               {% if user.is_authenticated %}
+              {% if user.id == article.author.id %}
               <a href="{% url 'update_article' article.slug %}">Edit</a>
               <a href="{% url 'delete_article' article.slug %}">Delete</a>
+              {% endif %}
               {% endif %}
             </small>
           </span>
