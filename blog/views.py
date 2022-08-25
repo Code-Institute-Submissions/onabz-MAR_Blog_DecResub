@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Article
 from .forms import CommentForm
+from django.urls import reverse_lazy
 
 
 class ArticleView(generic.ListView):
@@ -102,3 +103,4 @@ class UpdateArticleView(generic.UpdateView):
 class DeleteArticleView(generic.DeleteView):
     model = Article
     template_name = 'delete_article.html'
+    success_url = reverse_lazy('home')
