@@ -90,7 +90,7 @@ class ArticleLike(View):
 class AddArticleView(generic.CreateView):
     model = Article
     template_name = 'add_article.html'
-    fields = ('title', 'author', 'slug', 'body', 'featured_image', 'excerpt', 'status')
+    fields = ('title', 'author', 'slug', 'excerpt', 'body', 'featured_image', 'status')
 
 
 class UpdateArticleView(generic.UpdateView):
