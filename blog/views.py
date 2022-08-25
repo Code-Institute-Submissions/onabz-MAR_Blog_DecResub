@@ -1,9 +1,9 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
 from .models import Article
 from .forms import CommentForm
-from django.urls import reverse_lazy
 
 
 class ArticleView(generic.ListView):
