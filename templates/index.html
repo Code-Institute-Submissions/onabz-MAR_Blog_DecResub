@@ -34,7 +34,7 @@
                 <p class="post-meta">Posted by
                     <a href="#">{{ article.author }}</a>
                     on {{ article.date_created }} <i class="far fa-heart"></i>
-                    {{ article.number_of_likes }} <a href="{% url 'update_article' article.slug %}">Update</a></p>
+                    {{ article.number_of_likes }}   <a href="{% url 'update_article' article.slug %}">Edit</a></p>
             </div>
             <hr>
             {% endfor %}

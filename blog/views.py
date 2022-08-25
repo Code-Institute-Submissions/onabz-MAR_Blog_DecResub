@@ -96,4 +96,4 @@ class AddArticleView(generic.CreateView):
 class UpdateArticleView(generic.UpdateView):
     model = Article
     template_name = 'update_article.html'
-    fields = ('title', 'body')
+    fields = ('title', 'excerpt', 'body')
