@@ -97,3 +97,8 @@ class UpdateArticleView(generic.UpdateView):
     model = Article
     template_name = 'update_article.html'
     fields = ('title', 'excerpt', 'body')
+
+
+class DeleteArticleView(generic.DeleteView):
+    model = Article
+    template_name = 'delete_article.html'
