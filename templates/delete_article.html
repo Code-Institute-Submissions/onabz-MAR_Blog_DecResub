@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mt-5 mx-auto">
+                <h3>Delete: {{ article.title }}</h3>
+                <form method="post">
+                    {% csrf_token %}
+                    <strong>Are you sure?</strong>
+                    <button class="btn btn-outline-dark">DELETE</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
