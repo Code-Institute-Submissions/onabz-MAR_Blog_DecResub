@@ -13,7 +13,12 @@
           <h2 class="subheading">{{ article.excerpt }}</h2>
           <span class="meta">Posted by
             <a href="#">{{ article.author }}</a>
-            on {{ article.date_created }} <small><a href="{% url 'update_article' article.slug %}">Edit</a></small></span>
+            on {{ article.date_created }} 
+            <small>
+              <a href="{% url 'update_article' article.slug %}">Edit</a>
+              <a href="{% url 'delete_article' article.slug %}">Delete</a>
+            </small>
+          </span>
         </div>
       </div>
     </div>
