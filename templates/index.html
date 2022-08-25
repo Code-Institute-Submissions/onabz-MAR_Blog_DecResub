@@ -36,8 +36,10 @@
                     on {{ article.date_created }} <i class="far fa-heart"></i>
                     {{ article.number_of_likes }}   
                     <small>
+                        {% if user.is_authenticated %}
                         <a href="{% url 'update_article' article.slug %}">Edit</a>
                         <a href="{% url 'delete_article' article.slug %}">Delete</a>
+                        {% endif %}
                     </small>
                 </p>
             </div>
