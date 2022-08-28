@@ -21,17 +21,19 @@ amiresponisive image
 ### Media
 ### Acknowledgements
 
-# Vehicle Quiz Game
-The vehicle quiz game is a game for vehicle enthusiasts. It includes 30 questions in total comprising of mostly multiple-choice questions and some true or false questions. The multiple-choice questions each come with four options to choose from. They range from questions about cars to trains and motorcycles with varying difficulty levels.     
+# Mum Loves Representation
+Mum Loves Representation is a blog by an African British Mum(Tomi) who wants her little girl to be able to play with a heirloom doll that represents her as she grows and plays imaginatively. She believes that all children should play with black dolls for the purpose of encouraging diversity. She feels that  brown dolls, black dolls, and ethnic dolls are often left upon the shelf, untouched and ignored while it is easy to get one's hands-on white dolls. She believes the situation is very tragic.
+
+This blog features several Articles posted by Tomi that shed more light on this issue along with several other topics under the ethnicity topic.
 
 ![Responsive Mockup](documentation/testing/ami-responsive.png)
 
-The Responsive Mockup image above shows how responsive the Vehicle quiz game is across various device screen sizes ranging from mobile devices to large monitor screens. The Vehicle quiz game is well layed out with a clear font style used across the pages. The buttons are very legible on all the screen sizes. 
+The Responsive Mockup image above shows how responsive the Mum Loves Representation is across various device screen sizes ranging from mobile devices to large monitor screens. The Mum Loves Representation is well layed out with a bold font style used across all pages. The buttons are very legible on all the screen sizes. 
 
 ## UX
 
 ### Colour Scheme Used
-I chose to go with a very rich and bright color scheme through out the site to express to the user a sense of fun and playfulness. The dark and light shades of purple compliment each other very well.The buttons are large enough to be clicked on and touched with the fingers on a touch screen. Hover effects are used on all the buttons to further enhance the legibility of the buttons and thus the user experience. On selcting the correct answer, the button turns to a very bright green color while on selecting the wrong answer it changes to a bright red color. The background color also changes color depending on whether the user selects the correct or wrong answer to further get the user engaged in the game. 
+I chose to go with this Boostrap blog theme called Clean Blog. It features a modern design with a subtle splash of color. This makes the site very easy to read with large fonts that are well spaced out. I made use of specifically choosen background images to showcase the theme of the blog. 
 
 ### Typography
 
