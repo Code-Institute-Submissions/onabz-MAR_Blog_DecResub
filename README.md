@@ -1,30 +1,7 @@
-# Title
-Intro paragraph
-amiresponisive image
-## UX (briefly explain your design)
-### Colour Scheme (explain your colors, etc.... perhaps use coolors.co?)
-### Typography (explain any fonts and icon libraries used, like font-awesome and google fonts)
-### Wireframes (include screenshots of your wireframes)
-## Features
-### Existing Features
-### Features Left to Implement
-## Technologies Used (explain various tech used, such as HTML, CSS, Balsamiq, TinyPNG, Gitpod, GitHub, Git, etc.)
-## Testing
-### Browser Compatibility
-### Code Validation
-### Responsiveness
-### Unfixed Bugs
-## Deployment
-### Local Deployment
-## Credits
-### Content
-### Media
-### Acknowledgements
-
 # Mum Loves Representation
 Mum Loves Representation is a blog by an African British Mum(Tomi) who wants her little girl to be able to play with a heirloom doll that represents her as she grows and plays imaginatively. She believes that all children should play with black dolls for the purpose of encouraging diversity. She feels that  brown dolls, black dolls, and ethnic dolls are often left upon the shelf, untouched and ignored while it is easy to get one's hands-on white dolls. She believes the situation is very tragic.This blog features several Articles posted by Tomi that shed more light on this issue along with several other topics under the ethnicity topic.
 
-![Responsive Mockup](documentation/testing/ami-responsive.png)
+![Responsive Mockup]()
 
 The Responsive Mockup image above shows how responsive the Mum Loves Representation is across various device screen sizes ranging from mobile devices to large monitor screens. The Mum Loves Representation is well layed out with a bold font style used across all pages. The buttons are very legible on all the screen sizes. 
 
