@@ -111,6 +111,19 @@
     <!-- Script for updating Date automatically -->
     <script>
         $("#copyright").text(new Date().getFullYear());
+        // convert Post title to slug-format on front-end
+    /* jshint esversion: 11 */
+    let title = document.getElementById("id_title");
+    let slug = document.getElementById("id_slug");
+    title?.addEventListener("keyup", convertToSlug);
+    slug?.addEventListener("keyup", convertToSlug);
+
+    function convertToSlug() {
+      slug.value = title.value.toLowerCase()
+                 .replace(/ /g, '-')
+                 .replace(/[^\w-]+/g, '');
+    }
+
     </script>
 
 </body>
