@@ -11,3 +11,7 @@ body::before {
 #article-img {
   background-image: url('../img/article1.jpg');
 }
+
+#home-img {
+  background-image: url('../img/home1.jpg');
+}
