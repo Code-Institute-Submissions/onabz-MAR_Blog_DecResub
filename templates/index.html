@@ -32,7 +32,7 @@
                     </h3>
                 </a>
                 <p class="post-meta">Posted by
-                    <a href="#">{{ article.author }}</a>
+                    <a href="{% url 'about_view' %}">{{ article.author }}</a>
                     on {{ article.date_created }} <i class="far fa-heart"></i>
                     {{ article.number_of_likes }}   
                     <small>

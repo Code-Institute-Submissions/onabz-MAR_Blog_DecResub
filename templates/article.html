@@ -12,7 +12,7 @@
           <h1>{{ article.title }}</h1>
           <h2 class="subheading">{{ article.excerpt }}</h2>
           <span class="meta">Posted by
-            <a href="#">{{ article.author }}</a>
+            <a href="{% url 'about_view' %}">{{ article.author }}</a>
             on {{ article.date_created }}
             <small>
               {% if user.is_authenticated %}
