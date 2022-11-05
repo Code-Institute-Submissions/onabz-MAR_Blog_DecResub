@@ -78,11 +78,14 @@ I chose to use this carefully styled Bootstrap blog theme which features distrac
 
 ## Deployment
 
-The site was deployed to Heroku. The steps to deploy are as follows:
-    * 
-    * 
-    * 
-    * 
+The app was deployed to Heroku. There are four stages:
+     Create the Heroku app,
+     Attach the database,
+     Prepare our environment and settings.py file,
+     Get our static and media files stored on Cloudinary.
+
+- Create the Heroku app:
+    *
 
 The live link can be found here - https:///
 
