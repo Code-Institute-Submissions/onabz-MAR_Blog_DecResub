@@ -85,7 +85,7 @@ The app was deployed to Heroku. There are four stages:
      Get our static and media files stored on Cloudinary.
 
 - Create the Heroku app:
-    *
+    
 
 The live link can be found here - https:///
 
