@@ -64,7 +64,8 @@ I chose to use this carefully styled Bootstrap blog theme which features distrac
 - I used HTML to design the templates.
 - I used a Bootstrap theme that came with its css files and custom javascripts.
 - I used Javascript to set date in footer automatically.
-- I used Django frame work to create the website
+- I used Django frame work to create the website.
+- I used Python to input commands in Django frame work.
 - I used Gitpod as my code editor to write all the codes used throughout the website.
 - I used Github to host my repositories.
 - I used Git for version control of my website.
@@ -122,13 +123,71 @@ The app was deployed to Heroku. There are four stages:
                                                   # }
       - Add new DATABASES Section ( - links to the DATATBASE_URL variable on Heroku) - 
 
-                                                    DATABASES = {
-                                                        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-                                                    }
+              DATABASES = {
+                  'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+              }
+    - In the Terminal:
+      - Save all files and Make Migrations - python3 manage.py migrate
+  
+  - Get our static and media files stored on Cloudinary:
+    - In Cloudinary.com:
+      - Copy your CLOUDINARY_URL e.g. API Environment Variable - From Cloudinary Dashboard
+    - In env.py:
+     - Add Cloudinary URL to env.py - be sure to paste in the correct section of the link - os.environ["CLOUDINARY_URL"] = "cloudinary://************************"
+    - In Heroku:
+      - Add DISABLE_COLLECTSTATIC to Heroku Config Vars (temporary step for the moment, will be removed before deployment - e.g. DISABLE_COLLECTSTATIC, 1
+    - In settings.py:
+      - Add Cloudinary Libraries to installed apps - 
+                                                    
+                                                    INSTALLED_APPS = [
+                                                                        …,
+                                                                        'cloudinary_storage',
+                                                                        'django.contrib.staticfiles',
+                                                                        'cloudinary',
+                                                                        …,
+                                                    ]
 
+                                                    (note: order is important)
+      - Tell Django to use Cloudinary to store media and static files (Place under the Static files) - 
 
+              STATIC_URL = '/static/'
 
-    
+              STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+              STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+              STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+              MEDIA_URL = '/media/'
+              DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+      - Link file to the templates directory in Heroku (Place under the BASE_DIR line) - 
+
+                                  TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+      - Change the templates directory to TEMPLATES_DIR (Place within the TEMPLATES array) - 
+
+              TEMPLATES = [
+                {
+                  …,
+                  'DIRS': [TEMPLATES_DIR],
+                  …,
+                    ],
+                  },
+                },
+              ]
+      - Add Heroku Hostname to ALLOWED_HOSTS - ALLOWED_HOSTS = ['marblog.herokuapp.com', 'localhost']
+    - In Gitpod:
+      - Create 3 new folders on top level directory - media, static, templates
+      - Create procfile on the top level directory - Procfile
+    - In Procfile:
+      - Add code - web: gunicorn marblog.wsgi
+    - Note: Save all files
+    -  In the Terminal:
+      - Add, Commit and Push - 
+
+                                git add .
+                                git commit -m "Deployment Commit"
+                                git push
+    - In Heroku:
+      - Deploy Content manually through heroku.
+
 
 The live link can be found here - https:///
 
