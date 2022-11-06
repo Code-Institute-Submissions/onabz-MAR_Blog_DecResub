@@ -85,6 +85,49 @@ The app was deployed to Heroku. There are four stages:
      Get our static and media files stored on Cloudinary.
 
 - Create the Heroku app:
+    - In Heroku.com create new Heroku App - APP_NAME, Location = Europe.
+    - Add Database to App Resources - Located in the Resources Tab, Add-ons, search and add e.g. 'Heroku Postgres'.
+    - Copy DATABASE_URL value - Located in the Settings Tab, click reveal Config Vars, Copy Text.
+   
+- Attach the Database:
+    - In gitpod:
+      - Create new env.py file on top level directory - E.g. env.py
+
+    - In env.py:
+      - Import os library - import os
+      - Set environment variables - os.environ["DATABASE_URL"] = "Paste in Heroku DATABASE_URL Link"
+      - Add in secret key - os.environ["SECRET_KEY"] = "Make up your own randomSecretKey"
+
+    - In heroku.com:
+      - Add Secret Key to Config Vars - SECRET_KEY, "randomSecretKey"
+
+- Prepare our environment and settings.py file:
+    - In settings.py:
+      - Reference env.py -  
+                            
+                            from pathlib import Path
+                            import os
+                            import dj_database_url
+
+                            if os.path.isfile("env.py"):
+                              import env
+      - Remove the insecure secret key and replace - links to the SECRET_KEY variable on Heroku - SECRET_KEY = os.environ.get('SECRET_KEY')
+      - Comment out the old DataBases Section - 
+
+                                                  # DATABASES = {
+                                                  #     'default': {
+                                                  #         'ENGINE': 'django.db.backends.sqlite3',
+                                                  #         'NAME': BASE_DIR / 'db.sqlite3',
+                                                  #     }
+                                                  # }
+      - Add new DATABASES Section ( - links to the DATATBASE_URL variable on Heroku) - 
+
+                                                    DATABASES = {
+                                                        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+                                                    }
+
+
+
     
 
 The live link can be found here - https:///
