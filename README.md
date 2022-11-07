@@ -30,6 +30,18 @@ I chose to go with this Boostrap blog theme called Clean Blog. It features a mod
 
 I chose to use this carefully styled Bootstrap blog theme which features distraction free blog text optimized for legibility. It uses the Lora font-family for the body and the Open Sans font-family for the headers.
 
+### Wireframes
+
+Below are sketched images of how I planned to layout the website design. You will notice that the final design of the website is slightly different from my initial sketches for some pages which is because the template i used was not an exact match to my sketches.
+
+![Home Template Wireframe](static/Documentation/Wireframes/wireframe-home-page.jpg)
+![About Template Wireframe](static/Documentation/Wireframes/wireframe-about-page.jpg)
+![Article Template Wireframe](static/Documentation/Wireframes/wireframe-article-page.jpg)
+![Add Article Template Wireframe](static/Documentation/Wireframes/wireframe-add-article-page.jpg)
+![Register Template Wireframe](static/Documentation/Wireframes/wireframe-register-page.jpg)
+![Logout Template Wireframe](static/Documentation/Wireframes/wireframe-logout-page.jpg)
+![Signin Template Wireframe](static/Documentation/Wireframes/wireframe-signin-page.jpg)
+
 ## Features 
 
 ### Existing Features:
@@ -56,6 +68,34 @@ I chose to use this carefully styled Bootstrap blog theme which features distrac
 
   ![About Page](static/Documentation/testing/about-page.png)
 
+  __Article Page__
+
+  - This page shows each article in detail.
+
+  ![Article Page](static/Documentation/testing/article-pg.png)
+
+  - It shows details about the title,excerpt,author and date the article was created. 
+  - It gives users the ability to like and unlike the article with a like button below the article.
+
+  ![Like button](static/Documentation/testing/like-comment.png)
+
+  - It also gives users the ability to comment on articles with a comment section below the articles.
+
+  ![Comment section](static/Documentation/testing/comment-section.png)
+
+  - When non superusers post comments, they do not appear immediately on the article page. Instead the request is sent to the admin for approval. Once approved it then appears below the article. This gives the admin the ability to filter out unwanted comments. 
+
+  __Article edit/delete feature__
+
+  - Under the article list section on the home page, a user can edit or delete an article that the user is authorised to.
+  - The edit or delete feature won't appear on articles the user is not authorised to modify.
+
+  ![Edit/delete feature](static/Documentation/testing/permission-to-edit-or-delete.png)
+
+  - A user who is not logged in cannot edit or delete any article.
+
+  ![Edit/delete feature not available](static/Documentation/testing/edit-or-delete-not-permitted-when-not-signed-in.png)
+
   __Add Article Page__
 
   - This is the page from which authorised users and admin can add new articles to the blog.
@@ -67,7 +107,13 @@ I chose to use this carefully styled Bootstrap blog theme which features distrac
 
   ![Add Article Page](static/Documentation/testing/add-article-pg.png)
 
+  __Update Article Page__
 
+  - This page allows authorised users to edit articles that they have posted.
+  - It gives them relevant prepopulated input fields to carryout editing.
+  - It has an update button to post the updated article.
+
+  __Delete Article Page__
 
   __Register Page__
 
@@ -84,6 +130,15 @@ I chose to use this carefully styled Bootstrap blog theme which features distrac
   - It has a background image to the right side of the input fields which further showcases the brand.
 
   ![Login Page](static/Documentation/testing/login-page.png)
+
+  __Logout Page__
+
+  - It contains a sign out button for a user to logout. 
+  - The sign out button that has a hoover effect.
+  - It has a background image to the right side of the input fields which further showcases the brand.
+
+  ![Logout Page](static/Documentation/testing/logout-page.png)
+ 
 
  __The Footer__
 
