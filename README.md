@@ -154,21 +154,31 @@ Below are sketched images of how I planned to layout the website design. You wil
 
 ## Technologies Used
 
-- I used HTML to design the templates.
+- I used HTML, CSS and Javascript to design the templates.
 - I used a Bootstrap theme that came with its css files and custom javascripts.
 - I used Javascript to set date in footer automatically.
 - I used Django frame work to create the website.
 - I used Python to input commands in Django frame work.
-- I used Gitpod as my code editor to write all the codes used throughout the website.
+- I used Gitpod as my IDE for this project.
 - I used Github to host my repositories.
 - I used Git for version control of my website.
+- I used Google Chrome DevTools for testing the application's functionality.
+- I used Font Awesome icon for the social media icons.
 - I used Heroku to deploy the website.
+
+## Database
 
 ## Testing 
 
-- .  
+- HTML
+
+- CSS
+  - No errors were found when passing through the [W3C CSS Validator](https://validator.w3.org/nu/#textarea)
+
+![W3C CSS Validator](static/Documentation/testing/CSS-validator.png)
 
 ### Validator Testing 
+
 
 ## Deployment
 
