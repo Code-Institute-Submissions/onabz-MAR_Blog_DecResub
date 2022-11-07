@@ -7,6 +7,22 @@ The Responsive Mockup image above shows how responsive the Mum Loves Representat
 
 ## UX
 
+### User Stories:
+- As a User I can view a list of all articles so that I can choose one to read.
+- As a User I can click on an article so that I can read it in full.
+- As a User I can like or unlike articles so that I can express my views about them.
+- As a User I can view number of likes on each article so that I can see those that are more popular.
+- As a User I can leave comments on an article so that I can interact with the content creator.
+- As a User I can view comments on articles so that I can see the reader's thoughts on the article.
+- As a User/Admin I can approve or disapprove comments so that I can filter out questionable comments.
+- As a User I can register an account so that I can like and comment on an article.
+- As a User/Admin I can create, read, update and delete posts so that I can manage my articles.
+- As a User/Admin I can draft an article so that I can work on it later.
+- As a Site User I can add an article from within the website so that I don't have to use the admin panel.
+- As a Site User I can edit an article from within the website so that I don't have to use the admin panel.
+- As a Site User I can delete an article from within the website so that I don't have to use the admin panel.
+- As a Site Admin I can authorise a user so that they can edit/delete an article.
+
 ### Colour Scheme Used
 I chose to go with this Boostrap blog theme called Clean Blog. It features a modern design with a subtle splash of color. This makes the site very easy to read with large fonts that are well spaced out. I made use of specifically choosen background images to showcase the theme of the blog. 
 
@@ -16,16 +32,16 @@ I chose to use this carefully styled Bootstrap blog theme which features distrac
 
 ## Features 
 
-### Existing Features
+### Existing Features:
 
-- __The home page__
+  __The home page__
 
   - The home page contains the page header which features a specifically choosen background image that showcases various kinds of dolls in question. It contains the name of the blog and author as the hero text. Under the page header you have the article list area that shows the tiltle of the article, an excerpt, author, date created and a like button.
  
 ![Home Page](static/Documentation/testing/home-page.png)
 ![Home Page](static/Documentation/testing/article-list.png)
 
-- __Navigation Bar__
+ __Navigation Bar__
 
   - It is made up of five links including the logo. They are the Home page, About page, Add Article page and the Logout page(this changes to the register page and login page when there is no user logged in). It is fully responsive and features on all the pages. The Logo also links back to the home page. 
   - It makes it very easy for users to navigate around the pages with multiple links back to the home page.  
@@ -40,14 +56,36 @@ I chose to use this carefully styled Bootstrap blog theme which features distrac
 
   ![About Page](static/Documentation/testing/about-page.png)
 
-    __Register Page__
+  __Add Article Page__
+
+  - This is the page from which authorised users and admin can add new articles to the blog.
+  - A user needs to be logged in to use this page. If a user is not logged in, they get a warning page telling them to login.
+
+  ![Add Article warning Page](static/Documentation/testing/add-article-pg-not-permitted.png)
+
+  - This page contains the relevant input fields for for adding a new article.
+
+  ![Add Article Page](static/Documentation/testing/add-article-pg.png)
+
+
+
+  __Register Page__
 
   - It contains input fields for signing up.
-  - It has a sign up button that has a hoover effect
+  - It has a sign up button that has a hoover effect.
+  - It has a background image to the right side of the input fields which further showcases the brand.
 
   ![Register Page](static/Documentation/testing/register.png)
 
-- __The Footer__
+  __Login Page__
+
+  - It contains input fields for user login. 
+  - It has a sign in button that has a hoover effect.
+  - It has a background image to the right side of the input fields which further showcases the brand.
+
+  ![Login Page](static/Documentation/testing/login-page.png)
+
+ __The Footer__
 
   - At the very bottom of the home page and every other page on the MLR website is the footer which houses the relevant social media links. 
   -  When clicked on, these social media links open to a new tab preventing the user from having to use the back button to go back to the page they were on before.
