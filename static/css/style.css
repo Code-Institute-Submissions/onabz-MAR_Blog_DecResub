@@ -15,3 +15,7 @@ body::before {
 #home-img {
   background-image: url('../img/home1.jpg');
 }
+
+nav * {
+  color: white !important;
+}
