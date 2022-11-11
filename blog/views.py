@@ -24,7 +24,8 @@ class ArticleDetailView(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Article.objects.filter(status=1)
         article = get_object_or_404(queryset, slug=slug)
-        comments = article.comments.filter(approved=True).order_by('date_created')
+        comments = article.comments.filter(
+            approved=True).order_by('date_created')
         liked = False
         if article.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -41,11 +42,11 @@ class ArticleDetailView(View):
             },
         )
 
-
     def post(self, request, slug, *args, **kwargs):
         queryset = Article.objects.filter(status=1)
         article = get_object_or_404(queryset, slug=slug)
-        comments = article.comments.filter(approved=True).order_by('date_created')
+        comments = article.comments.filter(
+            approved=True).order_by('date_created')
         liked = False
         if article.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -60,7 +61,6 @@ class ArticleDetailView(View):
             comment.save()
         else:
             comment_form = CommentForm()
-
 
         return render(
             request,
@@ -99,7 +99,9 @@ class AddArticleView(generic.CreateView):
 class UpdateArticleView(generic.UpdateView):
     model = Article
     template_name = 'update_article.html'
-    fields = ('title', 'excerpt', 'body')
+    fields = (
+        'title', 'slug', 'author', 'excerpt', 'body',
+        'featured_image', 'status')
 
 
 class DeleteArticleView(generic.DeleteView):
