@@ -16,6 +16,11 @@ body::before {
   background-image: url('../img/home1.jpg');
 }
 
+.page-link {
+  color: black !important;
+}
+
 nav * {
   color: white !important;
 }
+
