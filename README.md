@@ -166,11 +166,37 @@ Below are sketched images of how I planned to layout the website design. You wil
 - I used Font Awesome icon for the social media icons.
 - I used Heroku to deploy the website.
 
-## Database
+## Database Schema
 
-
+![Database Schema](static/Documentation/testing/Database_schema.png)
 
 ## Testing 
+
+- I tested that pagination was working properly on the home page by adding more than four articles to trigger pagination.
+
+![Pagination1](static/Documentation/testing/test-for-pagination.png)
+![Pagination2](static/Documentation/testing/test-for-pagination2.png)
+
+- I tested that I could create a new article with the add article page. The new article appeared at the top on the article list area of the home page.
+
+![Create article](static/Documentation/testing/create-article.png)
+
+- I tested that I could edit the article I just created with the edit link next to the article.
+
+![Edit article](static/Documentation/testing/edit-article.png)
+
+- I tested to show that I could delete the article I just edited with the delete link next to the edit link.
+
+![Delete article](static/Documentation/testing/delete-article.png)
+![Delete article](static/Documentation/testing/delete-article2.png)
+
+- I tested that I could register a new account by creating a test-account.
+
+![Create test account](static/Documentation/testing/create-test-account.png)
+
+- I tested that test-account could not edit or delete any other users article. While test-account is logged in, the edit and delete links are not visible next to the articles in the article list area of the home page.
+
+![No edit or delete link](static/Documentation/testing/no-edit-delete-link.png)
 
 - HTML
 
