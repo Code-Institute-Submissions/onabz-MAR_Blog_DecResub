@@ -194,9 +194,13 @@ Below are sketched images of how I planned to layout the website design. You wil
 
 ![Create test account](static/Documentation/testing/create-test-account.png)
 
-- I tested that test-account could not edit or delete any other users article. While test-account is logged in, the edit and delete links are not visible next to the articles in the article list area of the home page.
+- I tested that the test-account could not edit or delete any other users article. While test-account is logged in, the edit and delete links are not visible next to the articles in the article list area of the home page.
 
 ![No edit or delete link](static/Documentation/testing/no-edit-delete-link.png)
+
+- I tested that the admin user account could edit or delete the article it created. Once logged in, it had access to the edit and delete links on the test article it created.
+
+![Edit and delete available](static/Documentation/testing/edit-delete-available.png)
 
 - HTML
 
