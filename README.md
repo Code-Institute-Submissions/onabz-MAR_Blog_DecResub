@@ -202,14 +202,21 @@ Below are sketched images of how I planned to layout the website design. You wil
 
 ![Edit and delete available](static/Documentation/testing/edit-delete-available.png)
 
+- I tested that the like button was working and that it showed the number of likes.
+
+![Like button tested](static/Documentation/testing/like-button-test1.png)
+![Like button tested](static/Documentation/testing/like-button-test2.png)
+
+- I tested that all social media links were working and opening in new tabs.
+
+### Validator Testing 
+
 - HTML
 
 - CSS
   - No errors were found when passing through the [W3C CSS Validator](https://validator.w3.org/nu/#textarea)
 
 ![W3C CSS Validator](static/Documentation/testing/CSS-validator.png)
-
-### Validator Testing 
 
 
 ## Deployment
@@ -338,11 +345,16 @@ Alternatively, if using Gitpod, you can click the green Gitpod button, or use [t
  
 ### Content 
 
-- 
+- The steps I used to apply the bootstrap theme for the blog was from [Using a Bootstrap Theme](https://www.youtube.com/watch?v=tUPjzTHgEWA&t=10s&ab_channel=MediaUpload)
+- How I went about creating the update article page was taken from [Update and Edit Blog Post - Django Blog #6](https://www.youtube.com/watch?v=J7xaESAddDQ&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=15&ab_channel=Codemy.com) 
+- How I went about creating the delete article page was taken from [Delete a Blog Post - Django Blog #7](https://www.youtube.com/watch?v=8NPOwmtupiI&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=7&ab_channel=Codemy.com)
 
 ### Media
 
--
+- The bootstrap theme used in the design of the blog was from [Start Boostrap](https://startbootstrap.com/theme/clean-blog)
+- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
 
 ### Acknowledgements
+
+- I would like to thank my Mentor Tim Nelson for his invaluable support all through this project. I would not have been able to put all this together if not for his patience and insight.
 - I would like to thank [Student Care](https://learn.codeinstitute.net/ci_support/diplomainsoftwaredevelopmentecommerce/studentcare) for their regular check up on me to ensure that I was always on track to completing this project and to reassure me that they were always available if I needed any help.
