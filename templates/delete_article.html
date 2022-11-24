@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-lg-8 col-md-10 mt-5 mx-auto">
                 {% if user.is_authenticated %}
-                {% if user.id == article.author.id %}
+                {% if user.id == article.author.id or user.is_superuser %}
                 <h3>Delete: {{ article.title }}</h3>
                 <br>
                 <form method="post">
