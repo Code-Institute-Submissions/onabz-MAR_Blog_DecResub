@@ -1,7 +1,7 @@
 # Mum Loves Representation
 Mum Loves Representation is a blog by an African British Mum(Tomi) who wants her little girl to be able to play with a heirloom doll that represents her as she grows and plays imaginatively. She believes that all children should play with black dolls for the purpose of encouraging diversity. She feels that  brown dolls, black dolls, and ethnic dolls are often left upon the shelf, untouched and ignored while it is easy to get one's hands-on white dolls. She believes the situation is very tragic.This blog features several Articles posted by Tomi that shed more light on this issue along with several other topics under the ethnicity topic.
 
-![Responsive Mockup]()
+![Responsive Mockup](static/Documentation/testing/ami-responsive.png)
 
 The Responsive Mockup image above shows how responsive the Mum Loves Representation is across various device screen sizes ranging from mobile devices to large monitor screens. The Mum Loves Representation is well layed out with a bold font style used across all pages. The buttons are very legible on all the screen sizes. 
 
@@ -345,14 +345,18 @@ Alternatively, if using Gitpod, you can click the green Gitpod button, or use [t
  
 ### Content 
 
+- The steps I used for the project set up was taken from [I think Therefore I Blog](https://www.youtube.com/watch?v=kEdGDvrFSks&ab_channel=MediaUpload)
 - The steps I used to apply the bootstrap theme for the blog was from [Using a Bootstrap Theme](https://www.youtube.com/watch?v=tUPjzTHgEWA&t=10s&ab_channel=MediaUpload)
 - How I went about creating the update article page was taken from [Update and Edit Blog Post - Django Blog #6](https://www.youtube.com/watch?v=J7xaESAddDQ&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=15&ab_channel=Codemy.com) 
 - How I went about creating the delete article page was taken from [Delete a Blog Post - Django Blog #7](https://www.youtube.com/watch?v=8NPOwmtupiI&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=7&ab_channel=Codemy.com)
 
 ### Media
 
-- The bootstrap theme used in the design of the blog was from [Start Boostrap](https://startbootstrap.com/theme/clean-blog)
+- The bootstrap theme used in the design of the blog was from [Start Bootstrap](https://startbootstrap.com/theme/clean-blog)
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+- The template for the login, logout and signup pages was from [Mdbootstrap](https://mdbootstrap.com/docs/standard/extended/login/#section-5)
+- All my background images were from [amarisandchaya](https://www.amarisandchaya.com/)
+- Most of the articles were from [amarisandchaya](https://www.amarisandchaya.com/) and one from [Metro Parent](https://www.metroparent.com/parenting/talking-about-race/the-importance-of-representation-in-toys/)
 
 ### Acknowledgements
 
