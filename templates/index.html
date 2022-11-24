@@ -37,7 +37,7 @@
                     {{ article.number_of_likes }}   
                     <small>
                         {% if user.is_authenticated %}
-                        {% if user.id == article.author.id %}
+                        {% if user.id == article.author.id or user.is_superuser %}
                         <a href="{% url 'update_article' article.slug %}">Edit</a>
                         <a href="{% url 'delete_article' article.slug %}">Delete</a>
                         {% endif %}
