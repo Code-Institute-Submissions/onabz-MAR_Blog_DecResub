@@ -92,16 +92,28 @@ class AddArticleView(generic.CreateView):
     model = Article
     template_name = 'add_article.html'
     fields = (
-        'title', 'slug', 'author', 'excerpt', 'body',
+        'title', 'slug', 'excerpt', 'body',
         'featured_image', 'status')
+
+    def form_valid(self, form):
+        f = form.save(commit=False)
+        f.author = self.request.user
+        f.save()
+        return HttpResponseRedirect(self.get_success_url())
 
 
 class UpdateArticleView(generic.UpdateView):
     model = Article
     template_name = 'update_article.html'
     fields = (
-        'title', 'slug', 'author', 'excerpt', 'body',
+        'title', 'slug', 'excerpt', 'body',
         'featured_image', 'status')
+
+    def form_valid(self, form):
+        f = form.save(commit=False)
+        f.author = self.request.user
+        f.save()
+        return HttpResponseRedirect(self.get_success_url())
 
 
 class DeleteArticleView(generic.DeleteView):
