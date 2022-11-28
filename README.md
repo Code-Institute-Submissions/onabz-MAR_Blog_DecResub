@@ -212,6 +212,26 @@ Below are sketched images of how I planned to layout the website design. You wil
 ### Validator Testing 
 
 - HTML
+  - No errors were found when passing through the [Nu Html Checker](https://validator.w3.org/nu/?doc=https://marblog.herokuapp.com/)
+
+![Nu Html Checker](static/Documentation/testing/html-validator-home.png)
+
+  - No errors were found when passing through the [Nu Html Checker](https://validator.w3.org/nu/?doc=https://marblog.herokuapp.com/about/)
+
+![Nu Html Checker](static/Documentation/testing/html-validator-about.png)
+
+  - No errors were found when passing through the [Nu Html Checker](https://validator.w3.org/nu/?doc=https://marblog.herokuapp.com/accounts/signup/)
+
+![Nu Html Checker](static/Documentation/testing/html-validator-signup.png)
+
+  - No errors were found when passing through the [Nu Html Checker](https://validator.w3.org/nu/?doc=https://marblog.herokuapp.com/accounts/login/)
+
+![Nu Html Checker](static/Documentation/testing/html-validator-login.png)
+
+  - No errors were found when passing through the [Nu Html Checker](https://validator.w3.org/nu/?doc=https://marblog.herokuapp.com/black-mumprenuer-who-loves-representation/)
+
+![Nu Html Checker](static/Documentation/testing/html-validator-articles.png )
+
 
 - CSS
   - No errors were found when passing through the [W3C CSS Validator](https://validator.w3.org/nu/#textarea)
