@@ -20,10 +20,6 @@ body::before {
   color: black !important;
 }
 
-#signup-img {
-  background-image: url('../Documentation/testing/register.png');
-}
-
 nav * {
   color: white !important;
 }
