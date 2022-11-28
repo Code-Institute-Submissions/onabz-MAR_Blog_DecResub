@@ -20,7 +20,7 @@ body::before {
   color: black !important;
 }
 
-.signup-img {
+#signup-img {
   background-image: url('../Documentation/testing/register.png');
 }
 
