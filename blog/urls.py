@@ -1,21 +1,22 @@
-from . import views
+# from . import views
+from .views import ArticleView, AboutView, AddArticleView, ArticleDetailView, ArticleLike, UpdateArticleView, DeleteArticleView
 from django.urls import path
 
 
 urlpatterns = [
-    path('', views.ArticleView.as_view(), name='home'),
-    path('about/', views.AboutView.as_view(), name='about_view'),
-    path('add_article/', views.AddArticleView.as_view(), name='add'),
+    path('', ArticleView.as_view(), name='home'),
+    path('about/', AboutView.as_view(), name='about_view'),
+    path('add_article/', AddArticleView.as_view(), name='add'),
     path(
         '<slug:slug>/',
-        views.ArticleDetailView.as_view(), name='article_detail'),
+        ArticleDetailView.as_view(), name='article_detail'),
     path(
         'like/<slug:slug>',
-        views.ArticleLike.as_view(), name='article_like'),
+        ArticleLike.as_view(), name='article_like'),
     path(
         'update/<slug:slug>',
-        views.UpdateArticleView.as_view(), name='update_article'),
+        UpdateArticleView.as_view(), name='update_article'),
     path(
         'delete/<slug:slug>',
-        views.DeleteArticleView.as_view(), name='delete_article'),
+        DeleteArticleView.as_view(), name='delete_article'),
 ]
