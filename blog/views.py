@@ -1,19 +1,19 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from django.views import generic, View
+from django.views.generic import View, ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from .models import Article
 from .forms import CommentForm
 
 
-class ArticleView(generic.ListView):
+class ArticleView(ListView):
     model = Article
     template_name = 'index.html'
     queryset = Article.objects.filter(status=1).order_by('-date_created')
     paginate_by = 4
 
 
-class AboutView(generic.CreateView):
+class AboutView(CreateView):
     model = Article
     template_name = 'about.html'
     fields = '__all__'
@@ -88,7 +88,7 @@ class ArticleLike(View):
         return HttpResponseRedirect(reverse('article_detail', args=[slug]))
 
 
-class AddArticleView(generic.CreateView):
+class AddArticleView(CreateView):
     model = Article
     template_name = 'add_article.html'
     fields = (
@@ -102,7 +102,7 @@ class AddArticleView(generic.CreateView):
         return HttpResponseRedirect(self.get_success_url())
 
 
-class UpdateArticleView(generic.UpdateView):
+class UpdateArticleView(UpdateView):
     model = Article
     template_name = 'update_article.html'
     fields = (
@@ -116,7 +116,7 @@ class UpdateArticleView(generic.UpdateView):
         return HttpResponseRedirect(self.get_success_url())
 
 
-class DeleteArticleView(generic.DeleteView):
+class DeleteArticleView(DeleteView):
     model = Article
     template_name = 'delete_article.html'
     success_url = reverse_lazy('home')
