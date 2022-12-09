@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404, reverse
-from django.views.generic import View, ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.views.generic import (
+    View, ListView, DetailView, CreateView, UpdateView, DeleteView)
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from .models import Article
@@ -99,7 +100,7 @@ class AddArticleView(CreateView):
         f = form.save(commit=False)
         f.author = self.request.user
         f.save()
-        return HttpResponseRedirect(self.get_success_url())
+        return redirect(reverse('home'))
 
 
 class UpdateArticleView(UpdateView):
@@ -113,7 +114,7 @@ class UpdateArticleView(UpdateView):
         f = form.save(commit=False)
         f.author = self.request.user
         f.save()
-        return HttpResponseRedirect(self.get_success_url())
+        return redirect(reverse('home'))
 
 
 class DeleteArticleView(DeleteView):
