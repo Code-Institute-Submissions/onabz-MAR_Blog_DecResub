@@ -1,7 +1,7 @@
 # Mum Loves Representation
 Mum Loves Representation is a blog by an African British Mum(Tomi) who wants her little girl to be able to play with a heirloom doll that represents her as she grows and plays imaginatively. She believes that all children should play with black dolls for the purpose of encouraging diversity. She feels that  brown dolls, black dolls, and ethnic dolls are often left upon the shelf, untouched and ignored while it is easy to get one's hands-on white dolls. She believes the situation is very tragic.This blog features several Articles posted by Tomi that shed more light on this issue along with several other topics under the ethnicity topic.
 
-![Responsive Mockup](static/Documentation/testing/ami-responsive.png)
+![Responsive Mockup](static/documentation/testing/ami-responsive.png)
 
 The Responsive Mockup image above shows how responsive the Mum Loves Representation is across various device screen sizes ranging from mobile devices to large monitor screens. The Mum Loves Representation is well layed out with a bold font style used across all pages. The buttons are very legible on all the screen sizes. 
 
@@ -34,13 +34,13 @@ I chose to use this carefully styled Bootstrap blog theme which features distrac
 
 Below are sketched images of how I planned to layout the website design. You will notice that the final design of the website is slightly different from my initial sketches for some pages which is because the template i used was not an exact match to my sketches.
 
-![Home Template Wireframe](static/Documentation/Wireframes/wireframe-home-page.jpg)
-![About Template Wireframe](static/Documentation/Wireframes/wireframe-about-page.jpg)
-![Article Template Wireframe](static/Documentation/Wireframes/wireframe-article-page.jpg)
-![Add Article Template Wireframe](static/Documentation/Wireframes/wireframe-add-article-page.jpg)
-![Register Template Wireframe](static/Documentation/Wireframes/wireframe-register-page.jpg)
-![Logout Template Wireframe](static/Documentation/Wireframes/wireframe-logout-page.jpg)
-![Signin Template Wireframe](static/Documentation/Wireframes/wireframe-signin-page.jpg)
+![Home Template Wireframe](static/documentation/wireframes/wireframe-home-page.jpg)
+![About Template Wireframe](static/documentation/wireframes/wireframe-about-page.jpg)
+![Article Template Wireframe](static/documentation/wireframes/wireframe-article-page.jpg)
+![Add Article Template Wireframe](static/documentation/wireframes/wireframe-add-article-page.jpg)
+![Register Template Wireframe](static/documentation/wireframes/wireframe-register-page.jpg)
+![Logout Template Wireframe](static/documentation/wireframes/wireframe-logout-page.jpg)
+![Signin Template Wireframe](static/documentation/wireframes/wireframe-signin-page.jpg)
 
 ## Features 
 
@@ -50,38 +50,38 @@ Below are sketched images of how I planned to layout the website design. You wil
 
   - The home page contains the page header which features a specifically choosen background image that showcases various kinds of dolls in question. It contains the name of the blog and author as the hero text. Under the page header you have the article list area that shows the tiltle of the article, an excerpt, author, date created and a like button.
  
-![Home Page](static/Documentation/testing/home-page.png)
-![Home Page](static/Documentation/testing/article-list.png)
+![Home Page](static/documentation/testing/home-page.png)
+![Home Page](static/documentation/testing/article-list.png)
 
  __Navigation Bar__
 
   - It is made up of five links including the logo. They are the Home page, About page, Add Article page and the Logout page(this changes to the register page and login page when there is no user logged in). It is fully responsive and features on all the pages. The Logo also links back to the home page. 
   - It makes it very easy for users to navigate around the pages with multiple links back to the home page.  
 
-![Nav Bar](static/Documentation/testing/nav-bar-login.png)
-![Nav Bar](static/Documentation/testing/nav-bar-logout.png)
+![Nav Bar](static/documentation/testing/nav-bar-login.png)
+![Nav Bar](static/documentation/testing/nav-bar-logout.png)
 
   __About Page__
 
   - The about page contains the page header which features a specifically choosen background image. It contains the name of the blog and author as the hero text. 
   - Under the page header you have the about page content with a header and the content.
 
-  ![About Page](static/Documentation/testing/about-page.png)
+  ![About Page](static/documentation/testing/about-page.png)
 
   __Article Page__
 
   - This page shows each article in detail.
 
-  ![Article Page](static/Documentation/testing/article-pg.png)
+  ![Article Page](static/documentation/testing/article-pg.png)
 
   - It shows details about the title,excerpt,author and date the article was created. 
   - It gives users the ability to like and unlike the article with a like button below the article.
 
-  ![Like button](static/Documentation/testing/like-comment.png)
+  ![Like button](static/documentation/testing/like-comment.png)
 
   - It also gives users the ability to comment on articles with a comment section below the articles.
 
-  ![Comment section](static/Documentation/testing/comment-section.png)
+  ![Comment section](static/documentation/testing/comment-section.png)
 
   - When non superusers post comments, they do not appear immediately on the article page. Instead the request is sent to the admin for approval. Once approved it then appears below the article. This gives the admin the ability to filter out unwanted comments. 
 
@@ -90,22 +90,22 @@ Below are sketched images of how I planned to layout the website design. You wil
   - Under the article list section on the home page, a user can edit or delete an article that the user is authorised to.
   - The edit or delete feature won't appear on articles the user is not authorised to modify.
 
-  ![Edit/delete feature](static/Documentation/testing/permission-to-edit-or-delete.png)
+  ![Edit/delete feature](static/documentation/testing/permission-to-edit-or-delete.png)
 
   - A user who is not logged in cannot edit or delete any article.
 
-  ![Edit/delete feature not available](static/Documentation/testing/edit-or-delete-not-permitted-when-not-signed-in.png)
+  ![Edit/delete feature not available](static/documentation/testing/edit-or-delete-not-permitted-when-not-signed-in.png)
 
   __Add Article Page__
 
   - This is the page from which authorised users and admin can add new articles to the blog.
   - A user needs to be logged in to use this page. If a user is not logged in, they get a warning page telling them to login.
 
-  ![Add Article warning Page](static/Documentation/testing/add-article-pg-not-permitted.png)
+  ![Add Article warning Page](static/documentation/testing/add-article-pg-not-permitted.png)
 
   - This page contains the relevant input fields for for adding a new article.
 
-  ![Add Article Page](static/Documentation/testing/add-article-pg.png)
+  ![Add Article Page](static/documentation/testing/add-article-pg.png)
 
   __Update Article Page__
 
@@ -121,7 +121,7 @@ Below are sketched images of how I planned to layout the website design. You wil
   - It has a sign up button that has a hoover effect.
   - It has a background image to the right side of the input fields which further showcases the brand.
 
-  ![Register Page](static/Documentation/testing/register.png)
+  ![Register Page](static/documentation/testing/register.png)
 
   __Login Page__
 
@@ -129,7 +129,7 @@ Below are sketched images of how I planned to layout the website design. You wil
   - It has a sign in button that has a hoover effect.
   - It has a background image to the right side of the input fields which further showcases the brand.
 
-  ![Login Page](static/Documentation/testing/login-page.png)
+  ![Login Page](static/documentation/testing/login-page.png)
 
   __Logout Page__
 
@@ -137,7 +137,7 @@ Below are sketched images of how I planned to layout the website design. You wil
   - The sign out button that has a hoover effect.
   - It has a background image to the right side of the input fields which further showcases the brand.
 
-  ![Logout Page](static/Documentation/testing/logout-page.png)
+  ![Logout Page](static/documentation/testing/logout-page.png)
  
 
  __The Footer__
@@ -145,7 +145,7 @@ Below are sketched images of how I planned to layout the website design. You wil
   - At the very bottom of the home page and every other page on the MLR website is the footer which houses the relevant social media links. 
   -  When clicked on, these social media links open to a new tab preventing the user from having to use the back button to go back to the page they were on before.
 
-![Footer](static/Documentation/testing/footer.png)
+![Footer](static/documentation/testing/footer.png)
 
 ### Features Left to Implement
 
@@ -168,44 +168,44 @@ Below are sketched images of how I planned to layout the website design. You wil
 
 ## Database Schema
 
-![Database Schema](static/Documentation/testing/Database_schema.png)
+![Database Schema](static/documentation/testing/Database_schema.png)
 
 ## Testing 
 
 - I tested that pagination was working properly on the home page by adding more than four articles to trigger pagination.
 
-![Pagination1](static/Documentation/testing/test-for-pagination.png)
-![Pagination2](static/Documentation/testing/test-for-pagination2.png)
+![Pagination1](static/documentation/testing/test-for-pagination.png)
+![Pagination2](static/documentation/testing/test-for-pagination2.png)
 
 - I tested that I could create a new article with the add article page. The new article appeared at the top on the article list area of the home page.
 
-![Create article](static/Documentation/testing/create-article.png)
+![Create article](static/documentation/testing/create-article.png)
 
 - I tested that I could edit the article I just created with the edit link next to the article.
 
-![Edit article](static/Documentation/testing/edit-article.png)
+![Edit article](static/documentation/testing/edit-article.png)
 
 - I tested to show that I could delete the article I just edited with the delete link next to the edit link.
 
-![Delete article](static/Documentation/testing/delete-article.png)
-![Delete article](static/Documentation/testing/delete-article2.png)
+![Delete article](static/documentation/testing/delete-article.png)
+![Delete article](static/documentation/testing/delete-article2.png)
 
 - I tested that I could register a new account by creating a test-account.
 
-![Create test account](static/Documentation/testing/create-test-account.png)
+![Create test account](static/documentation/testing/create-test-account.png)
 
 - I tested that the test-account could not edit or delete any other users article. While test-account is logged in, the edit and delete links are not visible next to the articles in the article list area of the home page.
 
-![No edit or delete link](static/Documentation/testing/no-edit-delete-link.png)
+![No edit or delete link](static/documentation/testing/no-edit-delete-link.png)
 
 - I tested that the admin user account could edit or delete the article it created. Once logged in, it had access to the edit and delete links on the test article it created.
 
-![Edit and delete available](static/Documentation/testing/edit-delete-available.png)
+![Edit and delete available](static/documentation/testing/edit-delete-available.png)
 
 - I tested that the like button was working and that it showed the number of likes.
 
-![Like button tested](static/Documentation/testing/like-button-test1.png)
-![Like button tested](static/Documentation/testing/like-button-test2.png)
+![Like button tested](static/documentation/testing/like-button-test1.png)
+![Like button tested](static/documentation/testing/like-button-test2.png)
 
 - I tested that all social media links were working and opening in new tabs.
 
@@ -214,29 +214,29 @@ Below are sketched images of how I planned to layout the website design. You wil
 - HTML
   - No errors were found when passing through the [Nu Html Checker](https://validator.w3.org/nu/?doc=https://marblog.herokuapp.com/)
 
-![Nu Html Checker](static/Documentation/testing/html-validator-home.png)
+![Nu Html Checker](static/documentation/testing/html-validator-home.png)
 
   - No errors were found when passing through the [Nu Html Checker](https://validator.w3.org/nu/?doc=https://marblog.herokuapp.com/about/)
 
-![Nu Html Checker](static/Documentation/testing/html-validator-about.png)
+![Nu Html Checker](static/documentation/testing/html-validator-about.png)
 
   - No errors were found when passing through the [Nu Html Checker](https://validator.w3.org/nu/?doc=https://marblog.herokuapp.com/accounts/signup/)
 
-![Nu Html Checker](static/Documentation/testing/html-validator-signup.png)
+![Nu Html Checker](static/documentation/testing/html-validator-signup.png)
 
   - No errors were found when passing through the [Nu Html Checker](https://validator.w3.org/nu/?doc=https://marblog.herokuapp.com/accounts/login/)
 
-![Nu Html Checker](static/Documentation/testing/html-validator-login.png)
+![Nu Html Checker](static/documentation/testing/html-validator-login.png)
 
   - No errors were found when passing through the [Nu Html Checker](https://validator.w3.org/nu/?doc=https://marblog.herokuapp.com/black-mumprenuer-who-loves-representation/)
 
-![Nu Html Checker](static/Documentation/testing/html-validator-articles.png )
+![Nu Html Checker](static/documentation/testing/html-validator-articles.png )
 
 
 - CSS
   - No errors were found when passing through the [W3C CSS Validator](https://validator.w3.org/nu/#textarea)
 
-![W3C CSS Validator](static/Documentation/testing/CSS-validator.png)
+![W3C CSS Validator](static/documentation/testing/CSS-validator.png)
 
 - Python
   - To validate my python code I used the pep8ci tool
@@ -245,6 +245,26 @@ https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/onabz/MAR_Blog/ma
 ### Browser testing
 
 ### Responsiveness
+
+### User story Testing
+
+- As a User I can view a list of all articles so that I can choose one to read.
+
+  ![Home Page](static/documentation/testing/article-list.png)
+
+- As a User I can click on an article so that I can read it in full.
+- As a User I can like or unlike articles so that I can express my views about them.
+- As a User I can view number of likes on each article so that I can see those that are more popular.
+- As a User I can leave comments on an article so that I can interact with the content creator.
+- As a User I can view comments on articles so that I can see the reader's thoughts on the article.
+- As a User/Admin I can approve or disapprove comments so that I can filter out questionable comments.
+- As a User I can register an account so that I can like and comment on an article.
+- As a User/Admin I can create, read, update and delete posts so that I can manage my articles.
+- As a User/Admin I can draft an article so that I can work on it later.
+- As a Site User I can add an article from within the website so that I don't have to use the admin panel.
+- As a Site User I can edit an article from within the website so that I don't have to use the admin panel.
+- As a Site User I can delete an article from within the website so that I don't have to use the admin panel.
+- As a Site Admin I can authorise a user so that they can edit/delete an article.
 
 ## Deployment
 
