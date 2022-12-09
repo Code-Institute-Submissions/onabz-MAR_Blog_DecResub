@@ -1,5 +1,6 @@
-# from . import views
-from .views import ArticleView, AboutView, AddArticleView, ArticleDetailView, ArticleLike, UpdateArticleView, DeleteArticleView
+from .views import (
+    ArticleView, AboutView, AddArticleView, ArticleDetailView,
+    ArticleLike, UpdateArticleView, DeleteArticleView)
 from django.urls import path
 
 
