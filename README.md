@@ -238,120 +238,130 @@ Below are sketched images of how I planned to layout the website design. You wil
 
 ![W3C CSS Validator](static/Documentation/testing/CSS-validator.png)
 
+- Python
+  - To validate my python code I used the pep8ci tool
+https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/onabz/MAR_Blog/main/marblog/settings.py
+
+### Browser testing
+
+### Responsiveness
 
 ## Deployment
 
 The app was deployed to Heroku. There are four stages:
-     Create the Heroku app,
-     Attach the database,
-     Prepare our environment and settings.py file,
-     Get our static and media files stored on Cloudinary.
+  - Create the Heroku app,
+  - Attach the database,
+  - Prepare our environment and settings.py file,
+  - Get our static and media files stored on Cloudinary.
 
 - Create the Heroku app:
-    - In Heroku.com create new Heroku App - APP_NAME, Location = Europe.
-    - Add Database to App Resources - Located in the Resources Tab, Add-ons, search and add e.g. 'Heroku Postgres'.
-    - Copy DATABASE_URL value - Located in the Settings Tab, click reveal Config Vars, Copy Text.
+  - In Heroku.com create new Heroku App - APP_NAME, Location = Europe.
+  - Add Database to App Resources - Located in the Resources Tab, Add-ons, search and add e.g. 'Heroku Postgres'.
+  - Copy DATABASE_URL value - Located in the Settings Tab, click reveal Config Vars, Copy Text.
    
 - Attach the Database:
-    - In gitpod:
-      - Create new env.py file on top level directory - E.g. env.py
+  - In gitpod:
+    - Create new env.py file on top level directory - E.g. env.py
 
-    - In env.py:
-      - Import os library - import os
-      - Set environment variables - os.environ["DATABASE_URL"] = "Paste in Heroku DATABASE_URL Link"
-      - Add in secret key - os.environ["SECRET_KEY"] = "Make up your own randomSecretKey"
+  - In env.py:
+    - Import os library - import os
+    - Set environment variables - os.environ["DATABASE_URL"] = "Paste in Heroku DATABASE_URL Link"
+    - Add in secret key - os.environ["SECRET_KEY"] = "Make up your own randomSecretKey"
 
-    - In heroku.com:
-      - Add Secret Key to Config Vars - SECRET_KEY, "randomSecretKey"
+  - In heroku.com:
+    - Add Secret Key to Config Vars - SECRET_KEY, "randomSecretKey"
 
 - Prepare our environment and settings.py file:
     - In settings.py:
       - Reference env.py -  
-                            
-                            from pathlib import Path
-                            import os
-                            import dj_database_url
+        ```python                    
+        from pathlib import Path
+        import os
+        import dj_database_url
 
-                            if os.path.isfile("env.py"):
-                              import env
-      - Remove the insecure secret key and replace - links to the SECRET_KEY variable on Heroku - SECRET_KEY = os.environ.get('SECRET_KEY')
+        if os.path.isfile("env.py"):
+          import env
+        ```
+      - Remove the insecure secret key and replace - links to the SECRET_KEY variable on Heroku - `SECRET_KEY = os.environ.get('SECRET_KEY')`
       - Comment out the old DataBases Section - 
-
-                                                  # DATABASES = {
-                                                  #     'default': {
-                                                  #         'ENGINE': 'django.db.backends.sqlite3',
-                                                  #         'NAME': BASE_DIR / 'db.sqlite3',
-                                                  #     }
-                                                  # }
+        ```python
+        # DATABASES = {
+        #     'default': {
+        #         'ENGINE': 'django.db.backends.sqlite3',
+        #         'NAME': BASE_DIR / 'db.sqlite3',
+        #     }
+        # }
+        ```
       - Add new DATABASES Section ( - links to the DATATBASE_URL variable on Heroku) - 
-
-              DATABASES = {
-                  'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-              }
+        ```python
+        DATABASES = {
+            'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+        }
+        ```
     - In the Terminal:
-      - Save all files and Make Migrations - python3 manage.py migrate
+      - Save all files and Make Migrations - `python3 manage.py migrate`
   
   - Get our static and media files stored on Cloudinary:
     - In Cloudinary.com:
       - Copy your CLOUDINARY_URL e.g. API Environment Variable - From Cloudinary Dashboard
     - In env.py:
-     - Add Cloudinary URL to env.py - be sure to paste in the correct section of the link - os.environ["CLOUDINARY_URL"] = "cloudinary://************************"
+     - Add Cloudinary URL to env.py - be sure to paste in the correct section of the link - `os.environ["CLOUDINARY_URL"] = "cloudinary://************************"`
     - In Heroku:
-      - Add DISABLE_COLLECTSTATIC to Heroku Config Vars (temporary step for the moment, will be removed before deployment - e.g. DISABLE_COLLECTSTATIC, 1
+      - Add DISABLE_COLLECTSTATIC to Heroku Config Vars (temporary step for the moment, will be removed before deployment - e.g. `DISABLE_COLLECTSTATIC`, `1`
     - In settings.py:
       - Add Cloudinary Libraries to installed apps - 
-                                                    
-                                                    INSTALLED_APPS = [
-                                                                        …,
-                                                                        'cloudinary_storage',
-                                                                        'django.contrib.staticfiles',
-                                                                        'cloudinary',
-                                                                        …,
-                                                    ]
-
-                                                    (note: order is important)
+        ```python                                            
+        INSTALLED_APPS = [
+            …,
+            'cloudinary_storage',
+            'django.contrib.staticfiles',
+            'cloudinary',
+            …,
+        ]
+        ```
+        (note: order is important)
       - Tell Django to use Cloudinary to store media and static files (Place under the Static files) - 
+        ```python
+        STATIC_URL = '/static/'
 
-              STATIC_URL = '/static/'
+        STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+        STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+        STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-              STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-              STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-              STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-              MEDIA_URL = '/media/'
-              DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+        MEDIA_URL = '/media/'
+        DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+        ```
       - Link file to the templates directory in Heroku (Place under the BASE_DIR line) - 
-
-                                  TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+        `TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')`
       - Change the templates directory to TEMPLATES_DIR (Place within the TEMPLATES array) - 
-
-              TEMPLATES = [
-                {
-                  …,
-                  'DIRS': [TEMPLATES_DIR],
-                  …,
-                    ],
-                  },
-                },
-              ]
-      - Add Heroku Hostname to ALLOWED_HOSTS - ALLOWED_HOSTS = ['marblog.herokuapp.com', 'localhost']
+        ```python
+        TEMPLATES = [
+          {
+            …,
+            'DIRS': [TEMPLATES_DIR],
+            …,
+          },
+        ]
+        ```
+      - Add Heroku Hostname to ALLOWED_HOSTS - `ALLOWED_HOSTS = ['marblog.herokuapp.com', 'localhost']`
     - In Gitpod:
       - Create 3 new folders on top level directory - media, static, templates
       - Create procfile on the top level directory - Procfile
     - In Procfile:
-      - Add code - web: gunicorn marblog.wsgi
+      - Add code - `web: gunicorn marblog.wsgi`
     - Note: Save all files
     -  In the Terminal:
       - Add, Commit and Push - 
-
-                                git add .
-                                git commit -m "Deployment Commit"
-                                git push
+      ```bash
+      git add .
+      git commit -m "Deployment Commit"
+      git push
+      ```
     - In Heroku:
       - Deploy Content manually through heroku.
 
 
-The live link can be found here - https:///
+The live link can be found here - https://marblog.herokuapp.com/
 
 ### Local Deployment
 
