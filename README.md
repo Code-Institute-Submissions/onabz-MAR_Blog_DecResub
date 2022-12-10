@@ -232,15 +232,39 @@ Below are sketched images of how I planned to layout the website design. You wil
 
 ![Nu Html Checker](static/documentation/testing/html-validator-articles.png )
 
-
 - CSS
   - No errors were found when passing through the [W3C CSS Validator](https://validator.w3.org/nu/#textarea)
 
 ![W3C CSS Validator](static/documentation/testing/CSS-validator.png)
 
 - Python
-  - To validate my python code I used the pep8ci tool
-https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/onabz/MAR_Blog/main/marblog/settings.py
+  - No errors were found when passing the settings.py file through the CI Python Linter tool [CI Python Linter](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/onabz/MAR_Blog/main/marblog/settings.py)
+  
+  ![pep8ci tool](static/documentation/testing/settings-py.png)
+
+  - No errors were found when passing the urls.py file for the marblog project through the CI Python Linter tool [CI Python Linter](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/onabz/MAR_Blog/main/marblog/urls.py)
+
+  ![pep8ci tool](static/documentation/testing/urls-py.png)
+
+  - No errors were found when passing the admin.py file through the CI Python Linter tool [CI Python Linter](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/onabz/MAR_Blog/main/blog/admin.py)
+
+  ![pep8ci tool](static/documentation/testing/admin-py.png)
+
+  - No errors were found when passing the forms.py file through the CI Python Linter tool [CI Python Linter](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/onabz/MAR_Blog/main/blog/forms.py)
+
+  ![pep8ci tool](static/documentation/testing/forms-py.png)
+
+  - No errors were found when passing the models.py file through the CI Python Linter tool [CI Python Linter](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/onabz/MAR_Blog/main/blog/models.py)
+
+  ![pep8ci tool](static/documentation/testing/models-py.png)
+
+  - No errors were found when passing the urls.py file for the blog app through the CI Python Linter tool [CI Python Linter](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/onabz/MAR_Blog/main/blog/urls.py)
+
+  ![pep8ci tool](static/documentation/testing/blog-urls-py.png)
+
+  - No errors were found when passing the views.py file through the CI Python Linter tool [CI Python Linter](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/onabz/MAR_Blog/main/blog/views.py)
+
+  ![pep8ci tool](static/documentation/testing/views-py.png)
 
 ### Browser testing
   - Google Chrome
