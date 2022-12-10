@@ -263,6 +263,11 @@ https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/onabz/MAR_Blog/ma
 
   ![Brave](static/documentation/testing/brave-browser.png)
 
+  - Microsoft edge
+
+  ![Edge](static/documentation/testing/microsoft-edge-browser.png)
+
+
 
 
 ### Responsiveness
