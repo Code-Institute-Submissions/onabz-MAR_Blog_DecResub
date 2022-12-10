@@ -253,18 +253,57 @@ https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/onabz/MAR_Blog/ma
   ![Home Page](static/documentation/testing/article-list.png)
 
 - As a User I can click on an article so that I can read it in full.
+
+  ![Article Page](static/documentation/testing/article-pg.png)
+
 - As a User I can like or unlike articles so that I can express my views about them.
+
+  ![Like button](static/documentation/testing/like-comment.png)
+  ![Like button tested](static/documentation/testing/like-button-test1.png)
+
 - As a User I can view number of likes on each article so that I can see those that are more popular.
+
+  ![Like button tested](static/documentation/testing/like-button-test1.png)
+
 - As a User I can leave comments on an article so that I can interact with the content creator.
+
+  ![Comment section](static/documentation/testing/comment-section.png)
+
 - As a User I can view comments on articles so that I can see the reader's thoughts on the article.
+
+  ![View comments](static/documentation/testing/view-comments.png)
+
 - As a User/Admin I can approve or disapprove comments so that I can filter out questionable comments.
+
+  ![Approve comment](static/documentation/testing/comment-approval1.png)
+
 - As a User I can register an account so that I can like and comment on an article.
+
+  ![Register new account](static/documentation/testing/register.png)
+
 - As a User/Admin I can create, read, update and delete posts so that I can manage my articles.
+
+  ![Create article](static/documentation/testing/add-article-pg.png)
+  ![Read article](static/documentation/testing/article-pg.png)
+  ![Update article](static/documentation/testing/update-article-pg.png)
+  ![Delete article](static/documentation/testing/delete-article.png)
+
 - As a User/Admin I can draft an article so that I can work on it later.
+
+  ![Article draft](static/documentation/testing/draft.png)
+
 - As a Site User I can add an article from within the website so that I don't have to use the admin panel.
+
+  ![Add new article](static/documentation/testing/add-article-pg.png)
+
 - As a Site User I can edit an article from within the website so that I don't have to use the admin panel.
+
+  ![Edit article](static/documentation/testing/update-article-pg.png)
+
 - As a Site User I can delete an article from within the website so that I don't have to use the admin panel.
-- As a Site Admin I can authorise a user so that they can edit/delete an article.
+
+  ![Delete article](static/documentation/testing/delete-article.png)
+
 
 ## Deployment
 
