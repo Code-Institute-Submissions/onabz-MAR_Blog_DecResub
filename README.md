@@ -268,9 +268,27 @@ https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/onabz/MAR_Blog/ma
   ![Edge](static/documentation/testing/microsoft-edge-browser.png)
 
 
-
-
 ### Responsiveness
+- Mobile screens
+
+  ![Mobile](static/documentation/testing/mobile-resolution.png)
+
+- Tablet screens
+
+  ![Tablet](static/documentation/testing/tablet-screen.png)
+
+- Small laptops
+
+  ![Small laptop](static/documentation/testing/small-laptop-screen.png)
+
+- Large laptops
+
+  ![Large laptop](static/documentation/testing/large-laptop-screens.png)
+
+- Extra large screens
+
+  ![Extra large screens](static/documentation/testing/extra-large-screens.png)
+
 
 ### User story Testing
 
