@@ -243,6 +243,27 @@ Below are sketched images of how I planned to layout the website design. You wil
 https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/onabz/MAR_Blog/main/marblog/settings.py
 
 ### Browser testing
+  - Google Chrome
+
+  ![Chrome](static/documentation/testing/google-chrome.png)
+
+  - Firefox
+
+  ![Firefox](static/documentation/testing/firefox-browser.png)
+
+  - Opera
+
+  ![Opera](static/documentation/testing/opera-browser.png)
+
+  - Avg
+
+  ![Avg](static/documentation/testing/avg-browser.png)
+
+  - Brave
+
+  ![Brave](static/documentation/testing/brave-browser.png)
+
+
 
 ### Responsiveness
 
